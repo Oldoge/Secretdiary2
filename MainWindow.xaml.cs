@@ -42,5 +42,9 @@ namespace Calender
                 lblTime.Visibility = Visibility.Visible;
         }
 
+        private void Item_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

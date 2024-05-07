@@ -23,10 +23,10 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="#C73F69" />
+                    <Setter Property="Foreground" Value="#a93ddd" />
                 </Trigger>
                 <Trigger Property="IsMouseCaptured" Value="True">
-                    <Setter Property="Foreground" Value="#8a2b42" />
+                    <Setter Property="Foreground" Value="White" />
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -68,8 +68,8 @@
 
 
         <Style x:Key="textBox" TargetType="TextBox">
-            <Setter Property="Background" Value="#CD5278" />
-            <Setter Property="Foreground" Value="#EBA5BB" />
+            <Setter Property="Background" Value="#a93ddd" />
+            <Setter Property="Foreground" Value="White" />
             <Setter Property="FontSize" Value="14" />
             <Setter Property="Grid.Column" Value="1" />
             <Setter Property="Margin" Value="10 0 0 0" />
