@@ -49,8 +49,8 @@
                     <Button Content="1" Style="{StaticResource buttonMonth}"/>
                     <Button Content="2" Style="{StaticResource buttonMonth}"/>
                     <Button Content="3" Style="{StaticResource buttonMonth}"/>
-                    <Button Content="4" Style="{StaticResource buttonMonth}" Foreground="#a93ddd" FontWeight="SemiBold"/>
-                    <Button Content="5" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="4" Style="{StaticResource buttonMonth}"/>
+                    <Button Content="5" Style="{StaticResource buttonMonth}" Foreground="#a93ddd" FontWeight="SemiBold"/>
                     <Button Content="6" Style="{StaticResource buttonMonth}"/>
                     <Button Content="7" Style="{StaticResource buttonMonth}"/>
                     <Button Content="8" Style="{StaticResource buttonMonth}"/>
@@ -62,20 +62,18 @@
 
                 <Separator Height="0.8" Background="#CACACA" Margin="30 10"/>
 
-                <TextBlock Text="April" Foreground="#a93ddd" FontSize="24" TextAlignment="Center" FontWeight="SemiBold" Margin="0 15 0 20"/>
+                <TextBlock Text="May" Foreground="#a93ddd" FontSize="24" TextAlignment="Center" FontWeight="SemiBold" Margin="0 15 0 20"/>
 
                 <Calendar CalendarItemStyle="{DynamicResource CalendarCalendarItemStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarCalendarDayButtonStyle1}" Style="{DynamicResource CalendarStyle1}"/>
             </StackPanel>
 
-            <StackPanel Grid.Column="1">
-                <!--Titles-->
-                <StackPanel Margin="30 45 30 10" Orientation="Horizontal">
-                    <TextBlock Text="24" FontSize="50" Foreground="#FFFFFF"/>
+            <StackPanel Grid.Column="1" DataContext="{DynamicResource textBox}">
 
-                    <StackPanel Grid.Column="1" Margin="10 0 0 0" VerticalAlignment="Center">
-                        <TextBlock Text="April" Foreground="#FFFFFF" FontSize="24"/>
-                        <TextBlock Text="Wednesday" Foreground="#EBA5BB" FontSize="14"/>
-                    </StackPanel>
+                <!--Titles-->
+                <StackPanel Margin="30 45 30 10" Orientation="Horizontal" Width="290">
+                    <TextBlock Text="" FontSize="50" Foreground="#FFFFFF"/>
+
+
 
                     <Button Style="{StaticResource buttonBig}" Margin="112 0 5 0">
                         <fa:ImageAwesome Icon="AngleLeft" Style="{StaticResource angleBig}"/>
@@ -85,8 +83,6 @@
                         <fa:ImageAwesome Icon="AngleRight" Style="{StaticResource angleBig}"/>
                     </Button>
                 </StackPanel>
-
-                <TextBlock Text="5 tasks- 2 dates left" Foreground="#a93ddd" FontSize="16" Margin="35 0 20 0"/>
 
                 <!--Add Notes-->
                 <Border Background="#a93ddd" CornerRadius="10" HorizontalAlignment="Center" Width="355" Margin="0 30 0 20" Padding="17 15 5 15">
@@ -124,18 +120,18 @@
 
                         </StackPanel>
 
-                        <Button Style="{StaticResource button}" Grid.Column="1">
+                        <Button Style="{StaticResource button}" Grid.Column="1" Click="CreateNewItem">
                             <fa:ImageAwesome Icon="PlusCircle" Width="28" Height="28" Foreground="#f9f9f9" />
                         </Button>
+
                     </Grid>
                 </Border>
 
                 <!--Notes-->
-                <us:Item Title="izveidot programmu" Time="09:45 - 10:30" Color="#EBA5BB" Icon="CheckCircle" IconBell="BellSlash"/>
-                <us:Item Title="paradit programmu" Time="11:30 - 12:00" Color="#EBA5BB" Icon="CheckCircle" IconBell="BellSlash" Loaded="Item_Loaded"/>
-                <us:Item Title="Izveidot parbaudi" Time="14:00 - 15:30" Color="#f1f1f1" Icon="CircleThin" IconBell="Bell"/>
-                <us:Item Title="Paest" Time="20:15 - 21:45" Color="White" Icon="CircleThin" IconBell="Bell"/>
-                <us:Item Title="Aiziet cucet" Time="23:00 - 23:20" Color="#f1f1f1" Icon="CircleThin" IconBell="Bell"/>
+
+
+                <us:Item Title="{Binding Text, ElementName=txtNote}" Time="{Binding Text, ElementName=txtTime}" Color="#f1f1f1" Icon="CircleThin" IconBell="Bell"/>
+
 
             </StackPanel>
         </Grid>
